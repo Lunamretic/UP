@@ -1,0 +1,12 @@
+C:\Users\Lunam\IdeaProjects\Messenger>git log
+commit 449197473ba8d702b1b729e8f2723daccbd51580
+Author: Lunamretic <lunamretic@gmail.com>
+Date:   Tue Feb 16 01:11:40 2016 +0300
+
+    Add status.txt
+
+commit 18bc0185ad164155bac296c9a506ad0419e85d9a
+Author: Lunamretic <lunamretic@gmail.com>
+Date:   Tue Feb 16 01:09:00 2016 +0300
+
+    Add.gitignore
