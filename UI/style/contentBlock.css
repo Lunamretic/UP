@@ -1,0 +1,118 @@
+/*Блок контента.*/
+h2 {
+	padding-top: 8px;
+	font-size: 16px;
+	font-weight: 0;
+	margin: 0;
+	float: left;
+}
+
+p {
+	margin: 0;
+	padding-top: 5px;
+	word-wrap: break-word;
+	max-width: 500px;
+}
+
+p.time {
+	padding-top: 8px;
+	text-align: right;
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0px;
+}
+
+li {
+	margin: 0;
+}
+
+.received-message:hover{
+	background: #E6E6FA;
+}
+
+.sent-message:hover{
+	background: #E6E6FA;
+}
+
+#username-block{
+	float: left;
+}
+
+#sidebar {
+	position: fixed;
+	height: 100%;
+    float: left;
+    width: 200px;
+	background: #a6a6a6;
+	border-top: 1px solid #dbd7d2;
+}
+  
+.person {
+	padding-left: 10px;
+	padding-top: 5px;
+	width: 190px;
+	height: 55px;
+}
+
+.person:hover {
+	background: #dbd7d2;
+	cursor: pointer;
+}
+   
+h4 {
+	padding-top: 0px;
+	padding-left: 60px;
+	font-family: Tahoma;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.sidebarIMG {
+	float:left;
+	height: 45px;
+	width: 45px;
+	border: 1px solid;
+}
+
+#message-history {
+	padding-left: 200px;
+	margin-top: 80px;
+	margin-bottom: 100px;
+	width: 600px;
+	height: 100%;
+	min-height: 100px;
+	background: #f5f5f5;
+  }
+   
+.received-message{
+	padding-left: 80px;
+	width: 520px;
+	min-height: 60px;
+}
+.sent-message {
+	padding-left: 80px;
+	width: 520px;
+	min-height: 60px;
+}
+	
+.received-message.marked{
+	background: #B0C4DE;
+}
+
+.sent-message.marked{
+	background: #B0C4DE;
+}
+
+.deletedMessage {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 80px;
+	width: 520px;
+	background: #FFDAB9;
+}

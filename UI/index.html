@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SunChat</title>
+		<link rel="stylesheet" href="style/style.css"/>
+		<link rel="stylesheet" href="style/topBlock.css"/>
+		<link rel="stylesheet" href="style/contentBlock.css"/>
+		<link rel="stylesheet" href="style/bottomBlock.css"/>
+		<script src="javascript/jquery-2.2.1.min.js"></script>
+		<script src="javascript/chat.js"></script>
+	</head>
+	
+	<body onload="run();">
+		<main class="messanger">
+			
+			<div id="header">
+				<div id="search-bar">
+					<input id="intext" class="input-search" type="text" name="Search" placeholder="search">
+				</div>
+				<div id="addressee">
+					<div id="addressee-image">
+						<img src="images/solar.jpg" class="addresseeIMG">
+					</div>
+					<h1>Solar of Astora</h1>
+					<h3><span class="counter-holder">0</span> messages</h3>
+					<button id="buttonDelete" class="button-delete">Delete</button>
+				</div>
+			</div>
+	
+	
+			<div id="sidebar">
+				<div class="person">
+					<img src="images/solar.jpg" class="sidebarIMG">
+					<h4>Solar of Astora</h4>
+					<h4>3 messages</h4>
+				</div>
+				<div class="person">
+					<img src="images/gabe.jpg" class="sidebarIMG">
+					<h4>Gabe Newell</h4>
+					<h4>468 messages</h4>
+				</div>
+				<div class="person">
+					<img src="images/teemo.jpg" class="sidebarIMG">
+					<h4>Captain Teemo</h4>
+					<h4>63 messages</h4>
+				</div>
+				<div class="person">
+					<img src="images/vivi.jpg" class="sidebarIMG">
+					<h4>Vivi Ornitier</h4>
+					<h4>713 messages</h4>
+				</div>
+			</div>
+		
+			<div id="message-history">
+				<ul id="mes" class="messages">
+					<li class="received-message">
+						<h2>Solar of Astora</h2> <p title="12:01:34" class="time">Tue Mar 1 2016</p>
+						<p>Hey!</p>
+					</li>
+					
+					
+					<li class="received-message">
+						<h2>Solar of Astora</h2> <p title="Tue Mar 1 2016" class="time">12:01:40</p>
+						<p>Praise the Sun!</p>
+					</li>
+					
+					<li class="sent-message">
+						<h2>Hideo Kojima</h2> <p title="14:28:13" class="time">Tue Mar 1 2016</p>
+						<p>\o/<br/>Hello!</p>
+					</li>
+				</ul>
+			</div>
+	
+			<div id="footer">
+				<form id="username-block">
+					<p>Logged in as:</p>
+					<input name="username" id="username" type="text" required value="Hideo Kojima" onkeypress="if(event.keyCode==13)buttonSend.click();">
+					<p class="connection">Disconnected!</p>
+				</form>
+				<div id="input-message-area">
+					<textarea id="inputMessage" wrap="hard" class="input-message" name="text" autofocus onkeypress="if(event.keyCode==10)buttonSend.click();"></textarea>
+					<button id="buttonSend" class="button-send">Send</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

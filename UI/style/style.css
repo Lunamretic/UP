@@ -1,0 +1,11 @@
+html{
+	width: 800px;
+	margin: 0 auto;
+	overflow: bottom;
+}
+body {
+	background: #f4f0ec;
+	width: 800px;
+	font: 11pt Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+}
