@@ -1,4 +1,4 @@
-package messenger.functional;
+/*package messenger.functional;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,27 +12,27 @@ import java.util.UUID;
 
 public class MessengerController {
     private String author;
-    private MessengerHistory msgHistory;
-    private MessengerSearch msgSearch;
+    private final MessengerHistory msgHistory;
+    private final MessengerSearch msgSearch;
 
     public MessengerController() {
         msgHistory = new MessengerHistory();
         msgSearch = new MessengerSearch();
     }
 
-    public boolean isBackToMenu(String str) {
+    private boolean isBackToMenu(String str) {
         Pattern p = Pattern.compile("@menu");
         Matcher m = p.matcher(str);
         return m.matches();
     }
 
-    public boolean isCorrectChoice(String str) {
+    private boolean isCorrectChoice(String str) {
         Pattern p = Pattern.compile("\\d");
         Matcher m = p.matcher(str);
         return m.matches();
     }
 
-    public boolean isMillisecond(String str) {
+    private boolean isMillisecond(String str) {
         Pattern p = Pattern.compile("\\d+");
         Matcher m = p.matcher(str);
         return m.matches();
@@ -47,7 +47,7 @@ public class MessengerController {
         }
     }
 
-    void menuController(PrintWriter pw) {
+    private void menuController(PrintWriter pw) {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd:MM - HH:mm:ss");
 
@@ -168,27 +168,23 @@ public class MessengerController {
         }
     }
 
-    int addMessage(Scanner scanner) {
+    private void addMessage(Scanner scanner) {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("(dd:MM - HH:mm:ss)");
         UUID uniqueID = UUID.randomUUID();
 
         String message;
         message = scanner.nextLine();
-        if (isBackToMenu(message)) {
-            return 0;
-        } else {
-
+        if (!isBackToMenu(message)) {
             System.out.println(this.author + "   " + dateFormat.format(date));
             System.out.println();
 
             msgHistory.addMessageToHistory(uniqueID.toString(), message, this.author, date.getTime());
             addMessage(scanner);
         }
-        return 0;
     }
 
-    void searchController(Scanner scanner, PrintWriter pw) {
+    private void searchController(Scanner scanner, PrintWriter pw) {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd:MM - HH:mm:ss");
 
@@ -262,13 +258,13 @@ public class MessengerController {
                 do {
                     System.out.print("Input period from (in millisecond): ");
                     timeFrom = scanner.nextLine();
-                } while (!isMillisecond(timeFrom));
+                } while (isMillisecond(timeFrom));
 
                 String timeTo;
                 do {
                     System.out.print("Input period to (in millisecond): ");
                     timeTo = scanner.nextLine();
-                } while (!isMillisecond(timeTo));
+                } while (isMillisecond(timeTo));
 
                 System.out.println();
                 int msgQuantityPeriod = msgSearch.showAllMessagesPeriod(Long.parseLong(timeFrom), Long.parseLong(timeTo), msgHistory);
@@ -290,4 +286,4 @@ public class MessengerController {
         }
     }
 
-}
+}*/

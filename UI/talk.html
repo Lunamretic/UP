@@ -22,7 +22,7 @@
 					<div id="addressee-image">
 						<img src="images/solar.jpg" class="addresseeIMG">
 					</div>
-					<h1>Solar of Astora</h1>
+					<h1 id="recipient">Solar of Astora</h1>
 					<h3><span class="counter-holder">0</span> messages</h3>
 					<button id="buttonDelete" class="button-delete">Delete</button>
 				</div>
@@ -54,21 +54,7 @@
 		
 			<div id="message-history">
 				<ul id="mes" class="messages">
-					<li class="received-message">
-						<h2>Solar of Astora</h2> <p title="12:01:34" class="time">Tue Mar 1 2016</p>
-						<p>Hey!</p>
-					</li>
-					
-					
-					<li class="received-message">
-						<h2>Solar of Astora</h2> <p title="Tue Mar 1 2016" class="time">12:01:40</p>
-						<p>Praise the Sun!</p>
-					</li>
-					
-					<li class="sent-message">
-						<h2>Hideo Kojima</h2> <p title="14:28:13" class="time">Tue Mar 1 2016</p>
-						<p>\o/<br/>Hello!</p>
-					</li>
+				
 				</ul>
 			</div>
 	
@@ -76,7 +62,7 @@
 				<form id="username-block">
 					<p>Logged in as:</p>
 					<input name="username" id="username" type="text" required value="Hideo Kojima" onkeypress="if(event.keyCode==13)buttonSend.click();">
-					<p class="connection">Disconnected!</p>
+					<p id="connection">Connection error!</p>
 				</form>
 				<div id="input-message-area">
 					<textarea id="inputMessage" wrap="hard" class="input-message" name="text" autofocus onkeypress="if(event.keyCode==10)buttonSend.click();"></textarea>

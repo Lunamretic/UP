@@ -53,9 +53,10 @@ button.button-send:hover { cursor: pointer; background: #ebebeb; }
 
 button.button-send:active { background: #dbd7d2; }
 	
-.connection {
+#connection {
 	color: red;
 	align: right;
 	padding-top: 35px;
-	padding-left: 100px;
+	padding-left: 20px;
+	visibility: hidden;
 }

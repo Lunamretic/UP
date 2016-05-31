@@ -1,12 +1,12 @@
-package messenger.functional;
+/*package messenger.functional;
 
-import messenger.Message;
+import messenger.functional.entities.Message;
 
 import java.text.SimpleDateFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MessengerSearch {
+class MessengerSearch {
     int showAllMessagesAuthor(String author, MessengerHistory messengerHistory) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         int msgQuantityAuthor = 0;
@@ -14,7 +14,7 @@ public class MessengerSearch {
         for (Message msg : messengerHistory.getHistoryList()) {
             if (author.compareToIgnoreCase(msg.getAuthor()) == 0) {
                 msgQuantityAuthor++;
-                System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getTimestamp()));
+                //System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getTimestamp()));
                 System.out.println(msg.getMessage());
                 System.out.println();
             }
@@ -35,7 +35,7 @@ public class MessengerSearch {
         for (Message msg : messengerHistory.getHistoryList()) {
             if (msg.getMessage().contains(keyWord)) {
                 msgQuantityKeyWord++;
-                System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getTimestamp()));
+                //System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getT()));
                 System.out.println(msg.getMessage());
                 System.out.println();
             }
@@ -49,7 +49,7 @@ public class MessengerSearch {
         }
     }
 
-    public boolean isRegularExpressionExist(String rExspression, String str) {
+    private boolean isRegularExpressionExist(String rExspression, String str) {
         Pattern p = Pattern.compile(".*" + rExspression + ".*");
         Matcher m = p.matcher(str);
         return m.matches();
@@ -62,7 +62,7 @@ public class MessengerSearch {
         for (Message msg : messengerHistory.getHistoryList()) {
             if (isRegularExpressionExist(rExpression, msg.getMessage())) {
                 msgQuantityRExpression++;
-                System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getTimestamp()));
+                //System.out.println(msg.getAuthor() + "  " + dateFormat.format(msg.getTimestamp()));
                 System.out.println(msg.getMessage());
                 System.out.println();
             }
@@ -98,3 +98,4 @@ public class MessengerSearch {
     }
 
 }
+*/

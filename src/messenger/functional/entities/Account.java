@@ -1,7 +1,15 @@
-package messenger.functional.entities;
+/*package messenger.functional.entities;
 
-/**
- * Created by Lunam on 03.03.2016.
- */
 public class Account {
-}
+    private String login;
+    private String password;
+    private String email;
+
+    public Account(String login, String password, String email){
+        this.login = login;
+        this.password = password;
+        this.email = email;
+    }
+
+
+}*/

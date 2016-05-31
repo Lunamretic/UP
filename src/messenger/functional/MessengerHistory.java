@@ -1,18 +1,18 @@
-package messenger.functional;
+/*package messenger.functional;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import messenger.Message;
+import messenger.functional.entities.Message;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class MessengerHistory {
-    private List<Message> historyList;
+class MessengerHistory {
+    private final List<Message> historyList;
 
-    public static class MyComparator implements Comparator<Message> {
+    private static class MyComparator implements Comparator<Message> {
         @Override
         public int compare(Message m1, Message m2) {
             return (int) (m1.getTimestamp() - m2.getTimestamp());
@@ -28,16 +28,15 @@ public class MessengerHistory {
         return this.historyList;
     }
 
-    boolean addMessageToHistory(String id, String message, String author, long timestamp) {
+    void addMessageToHistory(String id, String message, String author, long timestamp) {
         for (Message msg : historyList) {
             if (id.compareToIgnoreCase(msg.getId()) == 0) {
                 System.out.println("Id \"" + id + "\" is already used!");
-                return false;
+                return;
             }
         }
         this.historyList.add(new Message(id, message, author, timestamp));
         Collections.sort(historyList, new MyComparator());
-        return true;
     }
 
     int backupMessages() {
@@ -100,3 +99,4 @@ public class MessengerHistory {
         return historyList.size();
     }
 }
+*/

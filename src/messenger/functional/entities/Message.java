@@ -1,16 +1,18 @@
 package messenger.functional.entities;
 
 public class Message {
-    private String id;
-    private String message;
-    private String author;
-    private long timestamp;
+    private final String id;
+    private final String text;
+    private final String author;
+    private final String time;
+    private final String date;
 
-    public Message(String id, String message, String author, long timestamp) {
+    public Message(String id, String message, String author, String time, String date) {
         this.id = id;
-        this.message = message;
+        this.text = message;
         this.author = author;
-        this.timestamp = timestamp;
+        this.time = time;
+        this.date = date;
     }
 
     public String getId() {
@@ -18,14 +20,22 @@ public class Message {
     }
 
     public String getMessage() {
-        return this.message;
+        return this.text;
     }
 
     public String getAuthor() {
         return this.author;
     }
 
-    public long getTimestamp() {
-        return this.timestamp;
+    public String toString() {
+        return "{\"text\":\"" + this.text + "\",\"author\":\"" + this.author + "\",\"time\":\"" + this.time + "\",\"date\":\"" + this.date + "\",\"id\":\"" + this.id + "\"}";
     }
+
+    /*public String getTime() {
+        return time;
+    }
+
+    public String getDate() {
+        return date;
+    }*/
 }
